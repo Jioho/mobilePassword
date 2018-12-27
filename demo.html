@@ -19,9 +19,26 @@
 
 
   <script>
+    /**
+     * 参数说明
+     * @param size                  number        需要输入密码的长度
+     * @param title                 string        密码框弹起的标题
+     * @param forget                string        是否显示 “忘记密码”   参数 ： 'show' 显示    'hide' 隐藏
+     * @funtion forgetAction                      点击忘记密码的事件
+     * @funtion callback => (res)                 输入密码完成后回调
+     *   res => 输入的密码
+     */
+
+    /**
+     * 函数说明(实例化之后才可用)
+     * @function rise()      无参       弹出密码输入框
+     * @function drop()      无参       隐藏密码输入框
+     */
+
+
     var password = new mobilePassword({
       size: 6,
-      // forget: 'hide',
+      forget: 'show',
       title: '请输入支付密码',
       callback: (res) => {
         console.log(res);

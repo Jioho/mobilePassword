@@ -3,35 +3,31 @@
 #### 介绍
 手机端的密码输入控件
 
-#### 软件架构
-软件架构说明
+#### 参数说明
+##### 参数皆非必填
+ - @param size                  number        需要输入密码的长度
+ - @param title                 string        密码框弹起的标题
+ - @param forget                string        是否显示 “忘记密码”    参数 ： 'show' 显示    'hide' 隐藏
+ - @funtion forgetAction                      点击忘记密码的事件
+ - @funtion callback => (res)                 输入密码完成后回调
+  - res                                       返回的输入的密码
 
 
-#### 安装教程
+#### 函数说明(实例化之后才可用)
+ - @rise    显示密码输入框
+ - @drop    关闭密码输入框
+ 
 
-1. xxxx
-2. xxxx
-3. xxxx
+#### 额外说明
+ 1. 组件蒙版层 `z-index` 为500
+ 2. 组件密码层 `z-index` 为1000
 
-#### 使用说明
-
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 参与贡献
-
-1. Fork 本仓库
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
-
-
-#### 码云特技
-
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 文件结构
+|----------------------------------------------------------------------
+|- rem  主要为手机端用了rem的适配，（默认fontsize = 46.875 效果最佳） 
+|--- mobilePassword.js    核心JS文件
+|--- mobilePassword.less  样式相关less文件 
+|- demo 简单粗暴的演示文档
+|- mobilePassword.js    核心JS文件 
+|- mobilePassword.less  样式相关less文件
+|- mobilePassword.css   样式相关css文件
