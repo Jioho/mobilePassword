@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./mobilePassword.js"></script>
+  <link rel="stylesheet" href="./mobilePassword.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+
+  <button onclick="show()">显示密码框</button>
+  <p class="password"></p>
+
+
+  <script>
+    var password = new mobilePassword({
+      size: 6,
+      // forget: 'hide',
+      title: '请输入支付密码',
+      callback: (res) => {
+        console.log(res);
+        alert('输入的密码为：' + res)
+      },
+      forgetAction: function() {
+        console.log('忘记密码了')
+          // 这里可以进行一些后续操作
+      }
+    })
+
+    function show() {
+      password.rise();
+    }
+  </script>
+</body>
+
+</html>
